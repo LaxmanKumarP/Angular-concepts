@@ -1,1 +1,32 @@
-<p>template-syntax works!</p>
+<h6><b>Interpolation binding</b></h6>
+<p>My current hero is {{currentHero.name}}</p>
+<h3>
+    <img id="heroImg" src="{{heroImageUrl}}" style="height:70px">
+</h3>
+
+<p>The sum of 1 + 1 is {{1 + 1}}</p>
+<p>The sum of 1 + 1 is not {{1 + 1 + getVal()}}</p>
+
+<!-- Script tag will  be removed while build -->
+<script>
+    alert('test');
+</script>
+
+<hr />
+
+<h6><b>Property binding</b></h6>
+<img [src]="heroImageUrl" style="height:50px" />
+<br /><br />
+
+<button [disabled]="formNotChanged">Cancel</button> <br><br>
+
+<div [ngClass]="classConditions">[ngClass]Binding to the class property</div>
+<app-hero-detail [hero]="currentHero"></app-hero-detail><br>
+<h6>Using functioncall in bindings</h6>
+<img src="{{getHeroImg()}}" alt="heroimage" style="height:50px">
+<img [src]="getHeroImg()" alt="heroimage" style="height:50px">
+
+<app-hero-detail [hero]="currentHero"></app-hero-detail>
+<h6>Script tags in property binding</h6>
+<p><span>"{{evilTitle}}"is the <i>interpolated</i> evil title.</span></p>
+<p>"<span [innerHtml]="evilTitle"></span>"is the <i>propertey bound</i> evil title.</p><br>
