@@ -1,0 +1,36 @@
+<label [style.fontSize.px]="fontSize"> fontSize: {{fontSize}} px</label>
+<br>
+<div>Two way data binding with seperate Propertey and event binding</div>
+<app-font-sizer [size]="fontSize" (sizeChange)="fontSize = $event"></app-font-sizer>
+<br>
+<div>Two way data binding with [()]</div>
+<app-font-sizer [(size)]="fontSize"></app-font-sizer> <br>
+<div>Two way data binding with bindon</div>
+<app-font-sizer bindon-size="fontSize"></app-font-sizer>
+<br>
+<hr>
+<h6><b>NgModel Directive</b></h6>
+<div>two way data binding on form elements, using property and event binding</div>
+<div>current hero name is:{{currentHero.name}}</div>
+<input type="text" [value]="currentHero.name" (input)="currentHero.name=$event.target.value">
+<br><br>
+<div>
+    <label>Select Hero Name:</label>
+    <select [value]="currentHero.name" (change)="currentHero.name=$event.target.value">
+        <option value="">Select Hero</option>
+        <option value="johnDoe">johnDoe</option>
+        <option value="evan">evan</option>
+        <option value="dolby">dolby</option>
+    </select>
+
+
+</div>
+<br>
+<h6>Two way data binding using NgModel</h6>
+<input [(ngModel)]="currentHero.name">
+<br><br>
+<div>NgModel - splitted into property and event binding</div>
+<input [ngModel]="currentHero.name" (ngModelChange)="currentHero.name=$event">
+<br><br>
+<div>NgModel - manuplate the value on change</div>
+<input [ngModel]="currentHero.name" (ngModelChange)="setUpperCase($event)">

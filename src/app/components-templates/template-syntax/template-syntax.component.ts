@@ -16,11 +16,14 @@ export class TemplateSyntaxComponent implements OnInit {
   heroImageUrl1 = './assets/images/hero3.jpg';
   formNotChanged = true;
   evilTitle = 'Template <script>alert("evil never sleeps")</script>Syntax';
-
+  noOfColumns = 2;
 
   canSave = true;
   isUnchanged = false;
   isSpecial = false;
+  badCurly = 'different checking';
+  special = true;
+
 
   classConditions =
     {
@@ -28,11 +31,17 @@ export class TemplateSyntaxComponent implements OnInit {
       'modified': !this.isUnchanged,
       'special': this.isSpecial
     };
+  currentStyles = {
+    'font-style': this.canSave ? 'italic' : 'normal',
+    'font-weight': !this.isUnchanged ? 'bold' : 'normal',
+    'font-size': this.isSpecial ? '24px' : '12px'
+  };
 
 
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.noOfColumns)
   }
 
   getVal() {
@@ -40,6 +49,10 @@ export class TemplateSyntaxComponent implements OnInit {
   }
   getHeroImg() {
     return this.heroImageUrl;
+  }
+
+  onSave(event) {
+    console.log(event);
   }
 
 }

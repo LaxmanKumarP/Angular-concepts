@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { IndexComponent } from './index/index.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ComponentsTemplatesModule } from './components-templates/components-templates.module';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +19,8 @@ import { ComponentsTemplatesModule } from './components-templates/components-tem
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    ComponentsTemplatesModule
+    ComponentsTemplatesModule,
+    // FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
