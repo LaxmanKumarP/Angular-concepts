@@ -24,7 +24,7 @@ export class TemplateSyntaxComponent implements OnInit {
   badCurly = 'different checking';
   special = true;
 
-
+  nullHero = null;
   classConditions =
     {
       'saveable': this.canSave,

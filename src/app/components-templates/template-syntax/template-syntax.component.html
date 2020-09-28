@@ -109,3 +109,22 @@
 <input type="text" (keypress)="onSave($event)" />
 <br>
 <hr>
+<h6><b>Template expression operators</b></h6>
+<br>
+<h6>Pipe operator:</h6>
+<div>Hero name:{{currentHero.name | uppercase}}</div>
+<div>
+    <pre>{{currentHero | json}}</pre>
+</div>
+<br>
+<h6>Safe Navigation Operator</h6>
+<div>The null Hero's name is {{nullHero?.name}}</div>
+<br>
+<hr>
+<h6><b>Template Statements</b></h6>
+<div>Template statement allows assignment operator '='</div>
+<div>HeroName:{{currentHero.name}}</div>
+<div><button (click)="currentHero.name = 'David'">Save</button></div>
+<br>
+<div>We can chain the template statements</div>
+<div><button (click)="currentHero.name = 'David' ; onSave($event)">Save</button></div>
