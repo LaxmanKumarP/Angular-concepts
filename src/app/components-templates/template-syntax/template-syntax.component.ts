@@ -17,6 +17,7 @@ export class TemplateSyntaxComponent implements OnInit {
   formNotChanged = true;
   evilTitle = 'Template <script>alert("evil never sleeps")</script>Syntax';
   noOfColumns = 2;
+  phone = "9995352255";
 
   canSave = true;
   isUnchanged = false;
