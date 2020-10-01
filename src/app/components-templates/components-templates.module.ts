@@ -10,12 +10,18 @@ import { HeroBioComponent } from './hero-bio/hero-bio.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import { FontSizerComponent } from './font-sizer/font-sizer.component';
 import { FormsModule } from '@angular/forms';
+import { DirectivesComponent } from './directives/directives.component';
+import { HighlightDirective } from './attribute-directives/highlight.directive';
+import { HighlightV1Directive } from './attribute-directives/highlight-v1.directive';
+import { HighlightV2Directive } from './attribute-directives/highlight-v2.directive';
+import { HighlightV3Directive } from './attribute-directives/highlight-v3.directive';
+import { ReverseIfDirective } from './structural-directives/reverse-if.directive';
 
 
 
 
 @NgModule({
-  declarations: [DisplayDataInTemplateComponent, DisplayDataInTemplateUrlComponent, TemplateSyntaxComponent, HeroDetailComponent, CustomEventsComponent, DisplayHeroComponent, HeroBioComponent, TwoWayBindingComponent, FontSizerComponent],
+  declarations: [DisplayDataInTemplateComponent, DisplayDataInTemplateUrlComponent, TemplateSyntaxComponent, HeroDetailComponent, CustomEventsComponent, DisplayHeroComponent, HeroBioComponent, TwoWayBindingComponent, FontSizerComponent, DirectivesComponent, HighlightDirective, HighlightV1Directive, HighlightV2Directive, HighlightV3Directive, ReverseIfDirective],
   imports: [
     CommonModule,
     FormsModule

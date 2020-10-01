@@ -1,0 +1,90 @@
+<h6><b>Attribute Directives</b></h6>
+<p>AppHighlight- with static color</p>
+<p appHighlight>Highlight me!</p>
+<br>
+<h6>Respond to user initiated events</h6>
+<p appHighlightV1>Highlight me!</p> <br>
+<h6>Pass values to the directive with @Input data binding</h6>
+<p appHighlightV2>Highlight me!</p>
+<p appHighlightV2 [highlightColor]="'orange'">Highlight me!</p>
+<p appHighlightV2 highlightColor='yellow'>Highlight me!</p>
+<p appHighlightV2 [highlightColor]='color'>Highlight me!</p><br>
+<h6>Bind to @Input with alias</h6>
+<p appHighlightV3 [appHighlightV3]="color">Highlight me!</p>
+<p [appHighlightV3]="color">Highlight me!</p> <br>
+<hr>
+<h6><b>Structural Directives</b></h6>
+<br>
+<h6><b>*ngIf</b></h6>
+<div *ngIf="currentHero" class="name">{{currentHero.name}}</div>
+<div [style.display]="currentHero ? 'block' : 'none'">{{currentHero.name}}</div>
+
+<hr>
+
+<ng-template [ngIf]="currentHero">
+    <div class="name">{{currentHero.name}}</div>
+</ng-template>
+<hr>
+
+<div *ngIf="nullHero" class="name">{{nullHero.name}}</div>
+<div [style.display]="nullHero ? 'block' : 'none'">{{nullHero?.name}}</div><br>
+<hr>
+
+<h6>*ngFor:</h6>
+<div>*ngFor with index:</div>
+<div *ngFor="let hero of heros; let i = index">{{i+1}} - {{hero.name}}</div>
+<br>
+
+<div>*ngFor without trackBy:</div>
+<div *ngFor="let hero of heros">({{hero.id}}) {{hero.name}}</div><br>
+
+<div>*ngFor with trackBy:</div>
+<div *ngFor="let hero of heros; trackBy:trackByHeros">({{hero.id}}) {{hero.name}}</div> <br>
+<button class="btn btn-primary" (click)="updateWithDifferentHeroNames()">Update Hero names with different
+    heros</button>&nbsp;&nbsp;
+<button class="btn btn-primary" (click)="updateWithDifferentHeroIds()">Update Hero names with different ids</button>
+<br>
+<div>ng template</div>
+<p>Hip</p>
+<ng-template>
+    <p>Hip</p>
+</ng-template>
+<p>Horray</p>
+<br>
+<h6>ng container</h6>
+<p>I Turned the corner
+    <span *ngIf="currentHero">and saw {{currentHero.name}}. I waved</span>
+    and continued on my way.
+</p>
+
+<p>I Turned the corner
+    <ng-container *ngIf="currentHero">and saw {{currentHero.name}}. I waved</ng-container>
+    and continued on my way.
+</p>
+<br>
+
+<h6>ng-container to group elements</h6>
+<label>with span</label><br>
+<select [(ngModel)]="currentHero">
+    <option value="">Select Hero</option>
+    <span *ngFor='let hero of heros'>
+        <span *ngIf='hero.power > 3000'>
+            <option [ngValue]="hero">{{hero.name}}</option>
+        </span>
+    </span>
+</select> <br><br>
+
+<label>with ng-container</label><br>
+
+<select [(ngModel)]="currentHero">
+    <option value="">Select Hero</option>
+    <ng-container *ngFor='let hero of heros'>
+        <ng-container *ngIf='hero.power > 3000'>
+            <option [ngValue]="hero">{{hero.name}}</option>
+        </ng-container>
+    </ng-container>
+</select>
+<br><br>
+<h6>custom structural directive :appReverseIf</h6>
+<p *appReverseIf="condition">This should be shown</p>
+<p *appReverseIf="!condition">This should be removed</p>
