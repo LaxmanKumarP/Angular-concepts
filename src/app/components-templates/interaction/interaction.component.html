@@ -1,0 +1,21 @@
+<h6>Component Interaction</h6>
+<hr>
+<h6>Intercept Input propertey changes with a setter:</h6>
+<app-hero-name [name]="currentHero.name"></app-hero-name>
+<br><br>
+<h6>Patent intracts with child via template refarance variable</h6>
+<app-countdown-parent-with-temp-ref-var></app-countdown-parent-with-temp-ref-var>
+<br>
+<h6>Using @viewChild</h6>
+<app-countdown-parent-with-view-child></app-countdown-parent-with-view-child>
+<br>
+<h6>Using @Content child():</h6>
+<app-user-detail #detail>
+    <div>User edit form starts</div>
+    <app-edit-user [user]="detail.user"></app-edit-user>
+    <div>User edit form endss</div>
+</app-user-detail>
+
+<br>
+<h6>Parent and children communicate via a service</h6>
+<app-simple-todo></app-simple-todo>
