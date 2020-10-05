@@ -15,7 +15,7 @@ import { InteractionComponent } from './components-templates/interaction/interac
 import { LifecycleHooksComponent } from './components-templates/lifecycle-hooks/lifecycle-hooks.component';
 import { LifeCycleViewHooksComponent } from './components-templates/life-cycle-view-hooks/life-cycle-view-hooks.component';
 import { LifecycleContentHooksComponent } from './components-templates/lifecycle-content-hooks/lifecycle-content-hooks.component';
-
+import { PipesComponent } from './components-templates/pipes/pipes/pipes.component';
 
 import { FormControlComponent } from './forms-demo/reactive/form-control/form-control.component';
 import { FormGroupComponent } from './forms-demo/reactive/form-group/form-group.component';
@@ -40,7 +40,7 @@ const routes: Routes = [{ path: 'index', component: IndexComponent },
 { path: 'components-templates/lifecycle-hooks/view-hooks', component: LifeCycleViewHooksComponent },
 { path: 'components-templates/lifecycle-hooks/content-hooks', component: LifecycleContentHooksComponent },
 
-
+{ path: 'components-templates/pipes', component: PipesComponent },
 
 
 { path: 'forms/reactive/form-control', component: FormControlComponent },

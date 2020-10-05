@@ -1,0 +1,55 @@
+<h6><b>Pipes</b></h6>
+<div>Birth Day</div>
+<div>Without Pipe: {{birthday}}</div>
+<div>With Pipe: {{birthday | date}}</div>
+<div>With Pipe and parameter: {{birthday | date:"MM/dd/yy"}}</div>
+<div>With Pipe chaining: {{birthday | date | uppercase}}</div>
+<div>Json Pipe</div>
+<pre>
+    {{heros | json}}
+</pre>
+
+<br>
+<h6>Custom Pipes</h6>
+<div>2 power 10 is {{2 | exponentialStrength:10}}</div>
+<div>The prefered name of {{name}} is {{name | formatName:'middle': 'last'}}</div>
+<div>The prefered name of {{name}} is {{name | formatName:'first': 'last'}}</div>
+<div>The prefered name of {{name}} is {{name | formatName:'last': 'first'}}</div>
+<br>
+<h6>Pure Pipes</h6>
+<div>Heros without pipe(All Heros)</div>
+<ul>
+    <li *ngFor='let hero of heros'>{{hero.name}}</li>
+</ul>
+
+<br>
+<div>Pure pipes can't detect change in object property change / array element change</div>
+<div>Pure pipes only can detect the variable/ object/ array rferance changes</div>
+
+<div>
+    <label>Add hero by pushing object:</label>&nbsp;&nbsp;
+    <input type="text" [(ngModel)]="newHero.name" #heroName (keyup.enter)="pushHero(heroName.value,can.value)">
+    <input type="checkbox" [(ngModel)]="newHero.canFly" #can>canFly
+</div>
+
+
+<div>
+    <label>Add hero by referance change:</label>&nbsp;&nbsp;
+    <input type="text" [(ngModel)]="newHero.name" #heroName1 (keyup.enter)="concatHero(heroName1.value,can1.value)">
+    <input type="checkbox" [(ngModel)]="newHero.canFly" #can1>canFly
+</div>
+
+<br><br>
+
+<div>Heros with flying heros pure pipe</div>
+<ul>
+    <li *ngFor="let hero of (heros|flyingHerosPure)">{{hero.name}}</li>
+</ul>
+
+<br><br>
+
+<div>Heros with flying heros Impure pipe</div>
+<div>Impure pipes can respond for any kind of change(mutation of object properties/ referance change)</div>
+<ul>
+    <li *ngFor="let hero of (heros|flyingHerosImpure)">{{hero.name}}</li>
+</ul>
