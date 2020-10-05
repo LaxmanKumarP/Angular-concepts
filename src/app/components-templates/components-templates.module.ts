@@ -26,15 +26,23 @@ import { CountdownParentWithViewChildComponent } from './countdown-parent-with-v
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { SimpleTodoComponent } from './simple-todo/simple-todo.component';
 import { TodoDetailComponent } from './todo-detail/todo-detail.component';
+import { LifecycleHooksComponent } from './lifecycle-hooks/lifecycle-hooks.component';
+import { UserCycleComponent } from './user-cycle/user-cycle.component';
+import { LifeCycleViewHooksComponent } from './life-cycle-view-hooks/life-cycle-view-hooks.component';
+import { AppRoutingModule } from '../app-routing.module';
+import { UserAfterViewDetailComponent } from './user-after-view-detail/user-after-view-detail.component';
+import { LifecycleContentHooksComponent } from './lifecycle-content-hooks/lifecycle-content-hooks.component';
+import { UserAfterContentDetailComponent } from './user-after-content-detail/user-after-content-detail.component';
 
 
 
 
 @NgModule({
-  declarations: [DisplayDataInTemplateComponent, DisplayDataInTemplateUrlComponent, TemplateSyntaxComponent, HeroDetailComponent, CustomEventsComponent, DisplayHeroComponent, HeroBioComponent, TwoWayBindingComponent, FontSizerComponent, DirectivesComponent, HighlightDirective, HighlightV1Directive, HighlightV2Directive, HighlightV3Directive, ReverseIfDirective, InputTestComponent, EditUserComponent, InteractionComponent, HeroNameComponent, CountdownParentWithTempRefVarComponent, CountdownTimerComponent, CountdownParentWithViewChildComponent, UserDetailComponent, SimpleTodoComponent, TodoDetailComponent],
+  declarations: [DisplayDataInTemplateComponent, DisplayDataInTemplateUrlComponent, TemplateSyntaxComponent, HeroDetailComponent, CustomEventsComponent, DisplayHeroComponent, HeroBioComponent, TwoWayBindingComponent, FontSizerComponent, DirectivesComponent, HighlightDirective, HighlightV1Directive, HighlightV2Directive, HighlightV3Directive, ReverseIfDirective, InputTestComponent, EditUserComponent, InteractionComponent, HeroNameComponent, CountdownParentWithTempRefVarComponent, CountdownTimerComponent, CountdownParentWithViewChildComponent, UserDetailComponent, SimpleTodoComponent, TodoDetailComponent, LifecycleHooksComponent, UserCycleComponent, LifeCycleViewHooksComponent, UserAfterViewDetailComponent, LifecycleContentHooksComponent, UserAfterContentDetailComponent],
   imports: [
     CommonModule,
-    FormsModule
-  ]
+    FormsModule,
+    AppRoutingModule
+    ]
 })
 export class ComponentsTemplatesModule { }

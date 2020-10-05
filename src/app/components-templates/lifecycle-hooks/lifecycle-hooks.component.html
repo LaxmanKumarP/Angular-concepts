@@ -1,0 +1,16 @@
+<h6><b>ngOnChanges(),ngOnInit(),ngDocheck,ngOnDestroy</b></h6><br>
+<button class="btn btn-primary" (click)="created= !created">{{!created ? 'create' : 'destroy'}}
+    component</button> <br><br>
+<button class="btn btn-primary" *ngIf="created" (click)="changeCurrentUser()">Change current user</button>&nbsp;&nbsp;
+<button class="btn btn-primary" *ngIf="created" (click)="changeCurrentName()">Change current user name</button>
+
+<br>
+<br>
+<input type="text" [(ngModel)]="currentUser.name"> <br><br>
+<app-user-cycle *ngIf="created" [user]="currentUser"></app-user-cycle>
+<br>
+<h6><b>ngAfterViewInit(),ngAfterViewChecked()</b></h6>
+<a [routerLink]="['/components-templates/lifecycle-hooks/view-hooks']">Click here for view hook examples</a>
+<br><br>
+<h6><b>ngAfterContentInit(),ngAfterContentChecked()</b></h6>
+<a [routerLink]="['/components-templates/lifecycle-hooks/content-hooks']">Click here for view hook examples</a>
