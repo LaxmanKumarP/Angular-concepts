@@ -7,7 +7,9 @@ import { IndexComponent } from './index/index.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ComponentsTemplatesModule } from './components-templates/components-templates.module';
 import { FormsModule } from '@angular/forms';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { RxDemoModule } from './rx-demo/rx-demo.module';
+import { FormsDemoModule } from './forms-demo/forms-demo.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,10 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     NgbModule,
     ComponentsTemplatesModule,
-    // FormsModule
+    FormsModule,
+    RxDemoModule,
+    ReactiveFormsModule,
+    FormsDemoModule
   ],
   providers: [],
   bootstrap: [AppComponent]

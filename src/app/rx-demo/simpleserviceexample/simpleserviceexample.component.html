@@ -1,0 +1,8 @@
+<h6><b>Parent and children communicate via a service</b></h6>
+<h6>todos list</h6>
+
+<app-todo-detail *ngFor="let todo of todos" [todo]="todo"></app-todo-detail> <br><br>
+<!-- <app-todo-detail *ngFor="let todo of todos" [todo]="todo"></app-todo-detail> -->
+<!-- <div *ngFor="let todo of todos">{{todo.title}}</div> -->
+<h6>User Actions:</h6>
+<div *ngFor="let action of userActions">{{action}}</div>

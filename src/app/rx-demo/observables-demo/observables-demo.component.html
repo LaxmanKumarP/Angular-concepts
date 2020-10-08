@@ -1,2 +1,44 @@
 <h6><b>Observable Creation methods</b></h6> <br>
 <h6><b>FromEvent</b></h6>
+<div id="special-area"></div>
+<ul class="logs">
+    <li *ngFor="let log of fromEventLogs">{{log}}</li>
+</ul>
+
+<br>
+<h6><b>Ajax</b></h6>
+<ul class="logs">
+    <li *ngFor="let log of ajaxLogs">{{log}}</li>
+</ul>
+
+<br>
+<h6><b>Interval logs</b></h6>
+<ul class="logs">
+    <li *ngFor="let log of intervalLogs">{{log}}</li>
+</ul>
+
+<h6><b>From logs</b></h6>
+<ul class="logs">
+    <li *ngFor="let log of fromLogs">{{log}}</li>
+</ul>
+
+<h6><b>of logs</b></h6>
+<ul class="logs">
+    <li *ngFor="let log of ofLogs">{{log}}</li>
+</ul>
+
+<h6><b>Custom observable with new keyword</b></h6>
+<ul class="logs">
+    <li *ngFor="let log of customObservableLogs">{{log}}</li>
+</ul>
+
+<h6><b>Custom observable with error</b></h6>
+<ul class="logs">
+    <li *ngFor="let log of customObservable1Logs">{{log}}</li>
+</ul>
+<br>
+
+<h6><b>Custom observable on array</b></h6>
+<ul class="logs">
+    <li *ngFor="let log of arraysObservableLogs">{{log}}</li>
+</ul>

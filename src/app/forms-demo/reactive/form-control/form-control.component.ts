@@ -10,9 +10,14 @@ export class FormControlComponent implements OnInit {
 
   name = new FormControl('', Validators.required);
 
-  constructor() { }
+  constructor() {
+    this.name.valueChanges.subscribe(currentValue => {
+      console.log(currentValue);
+    })
+  }
 
   ngOnInit(): void {
+    this.name.valueChanges.subscribe(currentValue => console.log(currentValue));
   }
 
   readCurrentName() {

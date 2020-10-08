@@ -48,6 +48,7 @@ import { FlyingHerosImpurePipe } from './pipes/flying-heros-impure.pipe';
     CommonModule,
     FormsModule,
     AppRoutingModule
-    ]
+  ],
+  exports: [TodoDetailComponent]
 })
 export class ComponentsTemplatesModule { }

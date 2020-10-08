@@ -1,6 +1,16 @@
 <label>
     Name:
-    <input type="text"><br><br>
-    <button class="btn btn-primary">Read Current Name</button> <br>
-    <button class="btn btn-primary">Update Name</button>
+    <input type="text" [formControl]="name"><br><br>
+    <button class="btn btn-primary" (click)="readCurrentName()">Read Current Name</button> &nbsp;&nbsp;
+    <button class="btn btn-primary" (click)="updateName()">Update Name</button> &nbsp;&nbsp;
 </label>
+
+<br><br>
+<p>Status:{{name.status}}</p>
+<p>Validity:{{name.valid}}</p>
+<p>Invalid:{{name.invalid}}</p>
+<p>Pristine:{{name.pristine}}</p>
+<p>Dirty:{{name.dirty}}</p>
+<p>Touched:{{name.touched}}</p>
+<p>UnTouched:{{name.untouched}}</p>
+<p>Value:{{name.value}}</p>
