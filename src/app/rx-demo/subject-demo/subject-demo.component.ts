@@ -14,6 +14,9 @@ export class SubjectDemoComponent implements OnInit {
   subjectObservableLogs: string[] = [];
   namesSubjectLogs: string[] = [];
   regularSubjectLogs: string[] = [];
+  behaviourSubjectLogs: string[] = [];
+  replaySubjectLogs: string[] = [];
+  asyncSubjectLogs: string[] = [];
   constructor(private SubjectsDemoService: SubjectsDemoService) { }
 
   ngOnInit(): void {
@@ -86,6 +89,55 @@ export class SubjectDemoComponent implements OnInit {
 
     regularSubject.next(3);
     regularSubject.next(4);
+
+    // behaviour subjects
+    let behaviorSubject = new BehaviorSubject(0);
+    behaviorSubject.subscribe({
+      next: (v) => this.behaviourSubjectLogs.push(`observer1: ${v}`)
+    })
+
+    behaviorSubject.next(1);
+    behaviorSubject.next(2);
+    behaviorSubject.subscribe({
+      next: (v) => this.behaviourSubjectLogs.push(`observer2: ${v}`)
+    })
+
+    behaviorSubject.next(3);
+
+    // Replay Subject
+    let replaySubject = new ReplaySubject();
+    replaySubject.subscribe({
+      next: (v) => this.replaySubjectLogs.push(`observer1: ${v}`)
+    })
+
+    replaySubject.next(1);
+    replaySubject.next(2);
+    replaySubject.next(3);
+    replaySubject.next(4);
+    replaySubject.subscribe({
+      next: (v) => this.replaySubjectLogs.push(`observer2: ${v}`)
+    })
+
+    replaySubject.next(5);
+
+    // Async Subject
+    let asyncSubject = new AsyncSubject();
+    asyncSubject.subscribe({
+      next: (v) => this.asyncSubjectLogs.push(`observer1: ${v}`)
+    })
+    asyncSubject.next(1);
+    asyncSubject.next(2);
+    asyncSubject.next(3);
+    asyncSubject.next(4);
+
+    asyncSubject.subscribe({
+      next: (v) => this.asyncSubjectLogs.push(`observer2: ${v}`)
+    })
+    asyncSubject.next(5);
+    asyncSubject.complete();
+
+
+
   }
 
 

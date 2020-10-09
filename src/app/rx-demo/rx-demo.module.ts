@@ -7,11 +7,12 @@ import { SubjectDemoComponent } from './subject-demo/subject-demo.component';
 import { ColorfulTextComponent } from './colorful-text/colorful-text.component';
 import { ColorInputComponent } from './color-input/color-input.component';
 import { FormsModule } from '@angular/forms';
+import { OperatorsDemoComponent } from './operators-demo/operators-demo.component';
 
 
 
 @NgModule({
-  declarations: [ObservablesDemoComponent, SimpleserviceexampleComponent, SubjectDemoComponent, ColorfulTextComponent, ColorInputComponent],
+  declarations: [ObservablesDemoComponent, SimpleserviceexampleComponent, SubjectDemoComponent, ColorfulTextComponent, ColorInputComponent, OperatorsDemoComponent],
   imports: [
     CommonModule,
     ComponentsTemplatesModule,

@@ -14,10 +14,10 @@ import { LifecycleHooksComponent } from './components-templates/lifecycle-hooks/
 import { LifeCycleViewHooksComponent } from './components-templates/life-cycle-view-hooks/life-cycle-view-hooks.component';
 import { LifecycleContentHooksComponent } from './components-templates/lifecycle-content-hooks/lifecycle-content-hooks.component';
 import { PipesComponent } from './components-templates/pipes/pipes/pipes.component';
-
 import { ObservablesDemoComponent } from './rx-demo/observables-demo/observables-demo.component';
 import { SimpleserviceexampleComponent } from './rx-demo/simpleserviceexample/simpleserviceexample.component';
 import { SubjectDemoComponent } from './rx-demo/subject-demo/subject-demo.component';
+import { OperatorsDemoComponent } from './rx-demo/operators-demo/operators-demo.component';
 
 
 import { FormControlComponent } from './forms-demo/reactive/form-control/form-control.component';
@@ -39,16 +39,15 @@ const routes: Routes = [{ path: 'index', component: IndexComponent },
 { path: 'components-templates/directives', component: DirectivesComponent },
 { path: 'components-templates/input-test', component: InputTestComponent },
 { path: 'components-templates/component-interaction', component: InteractionComponent },
-
 { path: 'components-templates/lifecycle-hooks', component: LifecycleHooksComponent },
 { path: 'components-templates/lifecycle-hooks/view-hooks', component: LifeCycleViewHooksComponent },
 { path: 'components-templates/lifecycle-hooks/content-hooks', component: LifecycleContentHooksComponent },
-
 { path: 'components-templates/pipes', component: PipesComponent },
 
 { path: 'rxjs/observables-demo', component: ObservablesDemoComponent },
 { path: 'rxjs/service-demo', component: SimpleserviceexampleComponent },
 { path: 'rxjs/subjects-demo', component: SubjectDemoComponent },
+{ path: 'rxjs/operators-demo', component: OperatorsDemoComponent },
 
 
 { path: 'forms/reactive/form-control', component: FormControlComponent },
