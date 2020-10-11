@@ -10,12 +10,16 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RxDemoModule } from './rx-demo/rx-demo.module';
 import { FormsDemoModule } from './forms-demo/forms-demo.module';
+import { CounterOneModule } from './counter-one/counter-one.module';
+import { CounterTwoModule } from './counter-two/counter-two.module';
+import { ModulesDemoModule } from './modules-demo/modules-demo.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     IndexComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -25,7 +29,10 @@ import { FormsDemoModule } from './forms-demo/forms-demo.module';
     FormsModule,
     RxDemoModule,
     ReactiveFormsModule,
-    FormsDemoModule
+    FormsDemoModule,
+    CounterOneModule,
+    CounterTwoModule,
+    // ModulesDemoModule
   ],
   providers: [],
   bootstrap: [AppComponent]

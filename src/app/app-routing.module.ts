@@ -18,8 +18,9 @@ import { ObservablesDemoComponent } from './rx-demo/observables-demo/observables
 import { SimpleserviceexampleComponent } from './rx-demo/simpleserviceexample/simpleserviceexample.component';
 import { SubjectDemoComponent } from './rx-demo/subject-demo/subject-demo.component';
 import { OperatorsDemoComponent } from './rx-demo/operators-demo/operators-demo.component';
-
-
+import { LazyLoadingDemoComponent } from './modules-demo/lazy-loading-demo/lazy-loading-demo.component';
+import { EagerVsLazyLoadingComponent } from './modules-demo/eager-vs-lazy-loading/eager-vs-lazy-loading.component';
+import { CounterHomeComponent } from './counter-one/counter-home/counter-home.component'
 import { FormControlComponent } from './forms-demo/reactive/form-control/form-control.component';
 import { FormGroupComponent } from './forms-demo/reactive/form-group/form-group.component';
 import { NestedFormGroupComponent } from './forms-demo/reactive/nested-form-group/nested-form-group.component';
@@ -48,6 +49,15 @@ const routes: Routes = [{ path: 'index', component: IndexComponent },
 { path: 'rxjs/service-demo', component: SimpleserviceexampleComponent },
 { path: 'rxjs/subjects-demo', component: SubjectDemoComponent },
 { path: 'rxjs/operators-demo', component: OperatorsDemoComponent },
+{ path: 'ngmodules/eager-vs-lazy-loading', component: EagerVsLazyLoadingComponent },
+{ path: 'ngmodules/eager-vs-lazy-loading/counter-one-home', component: CounterHomeComponent },
+{ path: 'ngmodules/lazy-loading', component: LazyLoadingDemoComponent },
+
+// { path: 'customers', loadChildren: '../customers/customers.module#CustomersModule' },
+
+{ path: 'customers', loadChildren: () => import('./customers/customers.module').then(m => m.CustomersModule) },
+{ path: 'orders', loadChildren: () => import('./orders/orders.module').then(m => m.OrdersModule) },
+
 
 
 { path: 'forms/reactive/form-control', component: FormControlComponent },
