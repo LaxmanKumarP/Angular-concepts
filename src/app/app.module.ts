@@ -12,6 +12,7 @@ import { RxDemoModule } from './rx-demo/rx-demo.module';
 import { FormsDemoModule } from './forms-demo/forms-demo.module';
 import { CounterOneModule } from './counter-one/counter-one.module';
 import { CounterTwoModule } from './counter-two/counter-two.module';
+import { CoreModule } from './core/core.module';
 import { ModulesDemoModule } from './modules-demo/modules-demo.module';
 
 @NgModule({
@@ -32,6 +33,7 @@ import { ModulesDemoModule } from './modules-demo/modules-demo.module';
     FormsDemoModule,
     CounterOneModule,
     CounterTwoModule,
+    CoreModule
     // ModulesDemoModule
   ],
   providers: [],

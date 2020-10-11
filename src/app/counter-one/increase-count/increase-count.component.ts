@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CountingService } from '../counting.service';
 
 @Component({
   selector: 'app-increase-count',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IncreaseCountComponent implements OnInit {
 
-  constructor() { }
+  constructor(private countingService: CountingService) { }
 
   ngOnInit(): void {
   }
-
+  addOne() {
+    this.countingService.increment();
+  }
 }

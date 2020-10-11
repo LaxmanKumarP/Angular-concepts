@@ -20,7 +20,8 @@ import { SubjectDemoComponent } from './rx-demo/subject-demo/subject-demo.compon
 import { OperatorsDemoComponent } from './rx-demo/operators-demo/operators-demo.component';
 import { LazyLoadingDemoComponent } from './modules-demo/lazy-loading-demo/lazy-loading-demo.component';
 import { EagerVsLazyLoadingComponent } from './modules-demo/eager-vs-lazy-loading/eager-vs-lazy-loading.component';
-import { CounterHomeComponent } from './counter-one/counter-home/counter-home.component'
+import { CounterHomeComponent as CounterOneHomeComponent } from './counter-one/counter-home/counter-home.component';
+import { CounterHomeComponent as CounterTwoHomeComponent } from './counter-two/counter-home/counter-home.component';
 import { FormControlComponent } from './forms-demo/reactive/form-control/form-control.component';
 import { FormGroupComponent } from './forms-demo/reactive/form-group/form-group.component';
 import { NestedFormGroupComponent } from './forms-demo/reactive/nested-form-group/nested-form-group.component';
@@ -50,7 +51,10 @@ const routes: Routes = [{ path: 'index', component: IndexComponent },
 { path: 'rxjs/subjects-demo', component: SubjectDemoComponent },
 { path: 'rxjs/operators-demo', component: OperatorsDemoComponent },
 { path: 'ngmodules/eager-vs-lazy-loading', component: EagerVsLazyLoadingComponent },
-{ path: 'ngmodules/eager-vs-lazy-loading/counter-one-home', component: CounterHomeComponent },
+{ path: 'ngmodules/eager-vs-lazy-loading/counter-one-home', component: CounterOneHomeComponent },
+{ path: 'ngmodules/eager-vs-lazy-loading/counter-two-home', component: CounterTwoHomeComponent },
+{ path: 'lazy-counter-home', loadChildren: () => import('./counter-lazy/counter-lazy.module').then(m => m.CounterLazyModule) },
+
 { path: 'ngmodules/lazy-loading', component: LazyLoadingDemoComponent },
 
 // { path: 'customers', loadChildren: '../customers/customers.module#CustomersModule' },
